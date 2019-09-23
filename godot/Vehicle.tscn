@@ -9,30 +9,79 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "moving-1"
-length = 2.0
+length = 0.5
+loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("wheel - r:rotation_degrees")
+tracks/0/path = NodePath("wheel - l:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1200.0 ]
+"values": [ 0.0, 500.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("wheel - l:rotation_degrees")
+tracks/1/path = NodePath("wheel - r:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 1200.0 ]
+"values": [ 0.0, 500.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("exhaust:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 399.019, 129.123 ), Vector2( 399.019, 126.123 ), Vector2( 399.019, 129.123 ), Vector2( 399.019, 126.123 ), Vector2( 399.019, 129.123 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("chasis:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 494, 188.735 ), Vector2( 494, 185.735 ), Vector2( 494, 188.735 ), Vector2( 494, 185.735 ), Vector2( 494, 188.735 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("flashlight:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 521.503, 139.78 ), Vector2( 521.503, 136.78 ), Vector2( 521.503, 139.78 ), Vector2( 521.503, 136.78 ), Vector2( 521.503, 139.78 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("vulcan:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 592.081, 170.817 ), Vector2( 592.081, 167.817 ), Vector2( 592.081, 170.817 ), Vector2( 592.081, 167.817 ), Vector2( 592.081, 170.817 ) ]
 }
 
 [node name="Vehicle" type="Node2D"]
@@ -47,29 +96,29 @@ texture = ExtResource( 1 )
 flip_h = true
 
 [node name="chasis" type="Sprite" parent="."]
-position = Vector2( 494, 188 )
+position = Vector2( 494, 186.703 )
 texture = ExtResource( 2 )
 
 [node name="exhaust" type="Sprite" parent="."]
-position = Vector2( 399.019, 129.123 )
+position = Vector2( 399.019, 127.091 )
 texture = ExtResource( 3 )
 
 [node name="flashlight" type="Sprite" parent="."]
-position = Vector2( 521.503, 139.78 )
+position = Vector2( 521.503, 137.748 )
 texture = ExtResource( 4 )
 
 [node name="vulcan" type="Sprite" parent="."]
-position = Vector2( 592.081, 170.817 )
+position = Vector2( 592.081, 168.785 )
 texture = ExtResource( 5 )
 
 [node name="wheel - r" type="Sprite" parent="."]
 position = Vector2( 553.056, 294.321 )
-rotation = 20.944
+rotation = 1.18243
 texture = ExtResource( 6 )
 
 [node name="wheel - l" type="Sprite" parent="."]
 position = Vector2( 423.056, 294.321 )
-rotation = 20.944
+rotation = 1.18243
 texture = ExtResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
