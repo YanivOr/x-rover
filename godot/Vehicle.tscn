@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/vehicle/suspension.png" type="Texture" id=1]
 [ext_resource path="res://assets/vehicle/chasis.png" type="Texture" id=2]
@@ -6,6 +6,34 @@
 [ext_resource path="res://assets/vehicle/flashlight.png" type="Texture" id=4]
 [ext_resource path="res://assets/vehicle/vulcan.png" type="Texture" id=5]
 [ext_resource path="res://assets/vehicle/wheel.png" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "moving-1"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("wheel - r:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1200.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("wheel - l:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1200.0 ]
+}
 
 [node name="Vehicle" type="Node2D"]
 
@@ -36,8 +64,13 @@ texture = ExtResource( 5 )
 
 [node name="wheel - r" type="Sprite" parent="."]
 position = Vector2( 553.056, 294.321 )
+rotation = 20.944
 texture = ExtResource( 6 )
 
 [node name="wheel - l" type="Sprite" parent="."]
 position = Vector2( 423.056, 294.321 )
+rotation = 20.944
 texture = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/moving-1 = SubResource( 1 )
