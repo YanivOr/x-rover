@@ -1,6 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/tiles/main-tiles.png" type="Texture" id=1]
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 199.491, 10.2546, 200, 105.741, 21.25, 104.583, 10.8333, 88.9583, 10.8333, 70.4398, 25.3009, 33.9815, 42.662, 20.0926, 65.8102, 16.0417, 84.3287, 16.0417, 93.0092, 11.9908 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 2.38422, 105.162, 1.22681, 9.09722, 196.25, 10.2546, 197.407, 12.5694, 198.565, 104.583 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 2.03696, 104.005, 0.879547, 9.67593, 153.079, 12.5694, 176.227, 21.25, 184.329, 32.8241, 195.903, 60.0231, 198.796, 82.5926, 191.852, 99.375, 172.176, 105.741, 148.449, 101.69, 128.773, 104.583, 114.306, 101.69 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 197.755, 12.2222, 197.176, 195.671, 3.88889, 197.407, 5.0463, 178.31, 5.0463, 119.861, 7.36108, 80.5092, 10.8333, 53.3102, 21.8287, 29.0046, 46.1342, 17.4305 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 197.407, 11.0648, 196.829, 197.407, 2.96292, 197.407, 2.96292, 12.2222 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 163.495, 12.8009, 178.542, 24.375, 191.273, 46.9444, 198.218, 77.6157, 195.903, 197.986, 2.61569, 196.829, 2.03696, 13.3796 )
 
 [sub_resource type="TileSet" id=1]
 0/name = "main-tiles.png 0"
@@ -11,7 +29,13 @@
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
-0/shapes = [  ]
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 0/z_index = 0
 1/name = "main-tiles.png 1"
 1/texture = ExtResource( 1 )
@@ -21,7 +45,13 @@
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
-1/shapes = [  ]
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 1/z_index = 0
 2/name = "main-tiles.png 2"
 2/texture = ExtResource( 1 )
@@ -31,7 +61,13 @@
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
-2/shapes = [  ]
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 2/z_index = 0
 3/name = "main-tiles.png 3"
 3/texture = ExtResource( 1 )
@@ -41,7 +77,13 @@
 3/tile_mode = 0
 3/occluder_offset = Vector2( 0, 0 )
 3/navigation_offset = Vector2( 0, 0 )
-3/shapes = [  ]
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 3/z_index = 0
 4/name = "main-tiles.png 4"
 4/texture = ExtResource( 1 )
@@ -51,7 +93,13 @@
 4/tile_mode = 0
 4/occluder_offset = Vector2( 0, 0 )
 4/navigation_offset = Vector2( 0, 0 )
-4/shapes = [  ]
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 4/z_index = 0
 5/name = "main-tiles.png 5"
 5/texture = ExtResource( 1 )
@@ -61,20 +109,18 @@
 5/tile_mode = 0
 5/occluder_offset = Vector2( 0, 0 )
 5/navigation_offset = Vector2( 0, 0 )
-5/shapes = [  ]
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 5/z_index = 0
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 58.5131, 7.89543 )
 
 [node name="Tiles 1" type="StaticBody2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 format = 1
-tile_data = PoolIntArray( -65545, 3, 0, -65542, 4, 0, -65539, 4, 0, -131072, 4, 0, -131069, 4, 0, -131066, 5, 0 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 7.37884, -27.4483 )
-scale = Vector2( 10, 10 )
-shape = SubResource( 2 )
+tile_data = PoolIntArray( -65545, 3, 0, -65542, 4, 0, -65539, 4, 0, -131072, 4, 0, -131069, 4, 0, -131066, 5, 0, -131057, 3, 0, -131054, 4, 0, -131051, 5, 0, 65563, 0, 0, 65566, 1, 0, 65569, 1, 0, 65572, 1, 0, 65575, 1, 0, 65578, 2, 0 )

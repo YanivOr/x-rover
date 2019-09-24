@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Vehicle.gd" type="Script" id=1]
 [ext_resource path="res://assets/vehicle/suspension.png" type="Texture" id=2]
@@ -429,8 +429,11 @@ tracks/16/keys = {
 "values": [ Vector2( -62.4055, 30.6678 ), Vector2( -62.4055, 30.6678 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 13.8668, 11.9516 )
+[sub_resource type="CircleShape2D" id=6]
+radius = 4.39187
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 13.9028, 7.80762 )
 
 [node name="Vehicle" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -481,8 +484,17 @@ anims/idle = SubResource( 4 )
 anims/move-left = SubResource( 5 )
 anims/move-right = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 0.557908, 0.795578 )
+[node name="collision-wheel-r" type="CollisionShape2D" parent="."]
+position = Vector2( 69.8251, 76.7868 )
 scale = Vector2( 10, 10 )
-shape = SubResource( 3 )
+shape = SubResource( 6 )
+
+[node name="collision-wheel-f" type="CollisionShape2D" parent="."]
+position = Vector2( -60.1749, 76.7868 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -21.7604, -45.1373 )
+scale = Vector2( 10, 10 )
+shape = SubResource( 7 )
