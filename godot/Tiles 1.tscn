@@ -65,16 +65,16 @@
 5/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 48.4402, 10 )
+extents = Vector2( 58.5131, 7.89543 )
 
 [node name="Tiles 1" type="StaticBody2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 format = 1
-tile_data = PoolIntArray( 458752, 3, 0, 458755, 4, 0, 458758, 4, 0, 458761, 4, 0, 458764, 5, 0 )
+tile_data = PoolIntArray( -65545, 3, 0, -65542, 4, 0, -65539, 4, 0, -131072, 4, 0, -131069, 4, 0, -131066, 5, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 486.026, 559.515 )
+position = Vector2( 7.37884, -27.4483 )
 scale = Vector2( 10, 10 )
 shape = SubResource( 2 )

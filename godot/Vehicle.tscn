@@ -8,15 +8,14 @@
 [ext_resource path="res://assets/vehicle/vulcan.png" type="Texture" id=6]
 [ext_resource path="res://assets/vehicle/wheel.png" type="Texture" id=7]
 
-[sub_resource type="SpriteFrames" id=3]
-animations = [  ]
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
 
-[sub_resource type="Animation" id=1]
-resource_name = "moving-1"
+[sub_resource type="Animation" id=2]
 length = 0.5
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("KinematicBody2D/wheel - l:rotation_degrees")
+tracks/0/path = NodePath("wheel - r:rotation_degrees")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -28,7 +27,7 @@ tracks/0/keys = {
 "values": [ 0.0, 500.0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("KinematicBody2D/wheel - r:rotation_degrees")
+tracks/1/path = NodePath("wheel - l:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -37,108 +36,55 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.0, 500.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("KinematicBody2D/exhaust:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 399.019, 129.123 ), Vector2( 399.019, 126.123 ), Vector2( 399.019, 129.123 ), Vector2( 399.019, 126.123 ), Vector2( 399.019, 129.123 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("KinematicBody2D/chasis:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 494, 188.735 ), Vector2( 494, 185.735 ), Vector2( 494, 188.735 ), Vector2( 494, 185.735 ), Vector2( 494, 188.735 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("KinematicBody2D/flashlight:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 521.503, 139.78 ), Vector2( 521.503, 136.78 ), Vector2( 521.503, 139.78 ), Vector2( 521.503, 136.78 ), Vector2( 521.503, 139.78 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("KinematicBody2D/vulcan:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 592.081, 170.817 ), Vector2( 592.081, 167.817 ), Vector2( 592.081, 170.817 ), Vector2( 592.081, 167.817 ), Vector2( 592.081, 170.817 ) ]
+"values": [ 140.0, 500.0 ]
 }
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 13.8668, 11.8017 )
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 13.8668, 11.9516 )
 
-[node name="Vehicle" type="AnimatedSprite"]
-frames = SubResource( 3 )
-animation = "New Anim"
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="Vehicle" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
-[node name="suspension - r" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 47.1841, 53.6918 )
+[node name="suspension - r" type="Sprite" parent="."]
+position = Vector2( 16.5944, 30.6678 )
 texture = ExtResource( 2 )
 
-[node name="suspension - l" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( -31.8159, 53.6918 )
+[node name="suspension - l" type="Sprite" parent="."]
+position = Vector2( -62.4055, 30.6678 )
 texture = ExtResource( 2 )
 flip_h = true
 
-[node name="chasis" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 14.1691, -8.00209 )
+[node name="chasis" type="Sprite" parent="."]
+position = Vector2( -10.5599, -24.9668 )
 texture = ExtResource( 3 )
 
-[node name="exhaust" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( -80.8119, -67.6141 )
+[node name="exhaust" type="Sprite" parent="."]
+position = Vector2( -98.5409, -90.5788 )
 texture = ExtResource( 4 )
 
-[node name="flashlight" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 41.6721, -56.9571 )
+[node name="flashlight" type="Sprite" parent="."]
+position = Vector2( 23.9431, -79.9218 )
 texture = ExtResource( 5 )
 
-[node name="vulcan" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 112.25, -25.9201 )
+[node name="vulcan" type="Sprite" parent="."]
+position = Vector2( 94.5211, -48.8848 )
 texture = ExtResource( 6 )
 
-[node name="wheel - r" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 73.2251, 99.5178 )
-rotation = -0.542332
-scale = Vector2( 1, 1 )
+[node name="wheel - r" type="Sprite" parent="."]
+position = Vector2( 42.6354, 76.4939 )
+rotation = 1.32708
 texture = ExtResource( 7 )
 
-[node name="wheel - l" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( -56.775, 99.5178 )
-rotation = -0.542332
-scale = Vector2( 1, 1 )
+[node name="wheel - l" type="Sprite" parent="."]
+position = Vector2( -87.3647, 76.4939 )
+rotation = 3.39896
 texture = ExtResource( 7 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
-anims/moving-1 = SubResource( 1 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/idle = SubResource( 4 )
+anims/moving-1 = SubResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 18.455, 24.6067 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.557908, 0.795578 )
 scale = Vector2( 10, 10 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
