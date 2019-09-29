@@ -7,7 +7,7 @@ func _ready():
 	player_target = get_parent().get_node("Vehicle")
 	pass
 
-func _process(delta):
+func _physics_process(delta):
 	if player_died:
 		pass
 		
