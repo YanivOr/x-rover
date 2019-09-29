@@ -67,7 +67,7 @@ position = Vector2( 0.189577, -14.7647 )
 scale = Vector2( 1.01204, 1 )
 color = Color( 0.0862745, 0.101961, 0.0470588, 1 )
 texture = SubResource( 2 )
-polygon = PoolVector2Array( 1.32104, 8.68059, -4.07987, 14.8794, -0.0349503, 20.4971, 30, 15, 30, 15 )
+polygon = PoolVector2Array( -0.5, 10, -4, 15, 0, 20, 30, 15, 30, 15 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/idle = SubResource( 4 )

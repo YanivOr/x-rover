@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Vehicle.gd" type="Script" id=1]
 [ext_resource path="res://assets/vehicle/suspension.png" type="Texture" id=2]
@@ -7,7 +7,8 @@
 [ext_resource path="res://assets/vehicle/flashlight.png" type="Texture" id=5]
 [ext_resource path="res://assets/vehicle/vulcan.png" type="Texture" id=6]
 [ext_resource path="res://bullet.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/vehicle/wheel.png" type="Texture" id=8]
+[ext_resource path="res://shooting_fire.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/vehicle/wheel.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle-left"
@@ -260,6 +261,30 @@ tracks/20/loop_wrap = true
 tracks/20/imported = false
 tracks/20/enabled = true
 tracks/20/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("gattling/shooting_fire:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -522,6 +547,30 @@ tracks/20/keys = {
 "update": 0,
 "values": [ 0.0, 0.0 ]
 }
+tracks/21/type = "value"
+tracks/21/path = NodePath("gattling/shooting_fire:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "low-left"
@@ -779,6 +828,30 @@ tracks/20/keys = {
 "update": 0,
 "values": [ 180.0, 180.0 ]
 }
+tracks/21/type = "value"
+tracks/21/path = NodePath("gattling/shooting_fire:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "low-right"
@@ -1031,6 +1104,30 @@ tracks/20/loop_wrap = true
 tracks/20/imported = false
 tracks/20/enabled = true
 tracks/20/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("gattling/shooting_fire:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -1317,6 +1414,30 @@ tracks/22/keys = {
 "update": 0,
 "values": [ 180.0, 180.0 ]
 }
+tracks/23/type = "value"
+tracks/23/path = NodePath("gattling/shooting_fire:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "move-low-left"
@@ -1593,6 +1714,30 @@ tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("gattling/shooting_fire:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -1879,6 +2024,30 @@ tracks/22/keys = {
 "update": 0,
 "values": [ 0.0, 0.0 ]
 }
+tracks/23/type = "value"
+tracks/23/path = NodePath("gattling/shooting_fire:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
 [sub_resource type="Animation" id=8]
 length = 0.5
@@ -2159,6 +2328,30 @@ tracks/22/keys = {
 "update": 0,
 "values": [ 0.0, 0.0 ]
 }
+tracks/23/type = "value"
+tracks/23/path = NodePath("gattling/shooting_fire:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
 [sub_resource type="CircleShape2D" id=9]
 radius = 4.39187
@@ -2189,31 +2382,34 @@ texture = ExtResource( 2 )
 flip_h = true
 
 [node name="chasis" type="Sprite" parent="."]
-position = Vector2( -10.56, -7.967 )
+position = Vector2( -10.5599, -24.9668 )
 texture = ExtResource( 3 )
 
 [node name="exhaust" type="Sprite" parent="."]
-position = Vector2( -98.541, -73.579 )
+position = Vector2( -98.5409, -90.5788 )
 texture = ExtResource( 4 )
 
 [node name="flashlight" type="Sprite" parent="."]
-position = Vector2( 23.943, -62.922 )
+position = Vector2( 23.9431, -79.9218 )
 texture = ExtResource( 5 )
 
 [node name="gattling" type="Sprite" parent="."]
-position = Vector2( 94.521, -31.885 )
+position = Vector2( 94.5211, -48.8848 )
 texture = ExtResource( 6 )
 
 [node name="bullet" parent="gattling" instance=ExtResource( 7 )]
 position = Vector2( 45, -15 )
 
+[node name="shooting_fire" parent="gattling" instance=ExtResource( 8 )]
+position = Vector2( 65, 0 )
+
 [node name="wheel - f" type="Sprite" parent="."]
 position = Vector2( 42.6354, 76.4939 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="wheel - r" type="Sprite" parent="."]
 position = Vector2( -87.3647, 76.4939 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="collision-wheel-r" type="CollisionShape2D" parent="."]
 position = Vector2( -87.175, 76.787 )
