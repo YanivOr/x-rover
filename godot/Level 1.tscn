@@ -134,6 +134,7 @@ position = Vector2( -1996.06, 1916.03 )
 position = Vector2( 511.079, 300.635 )
 current = true
 zoom = Vector2( 2, 2 )
+process_mode = 0
 script = ExtResource( 3 )
 
 [node name="TileMap" type="TileMap" parent="."]
