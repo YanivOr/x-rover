@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Vehicle.gd" type="Script" id=1]
 [ext_resource path="res://assets/vehicle/suspension.png" type="Texture" id=2]
@@ -6,7 +6,8 @@
 [ext_resource path="res://assets/vehicle/exhaust.png" type="Texture" id=4]
 [ext_resource path="res://assets/vehicle/flashlight.png" type="Texture" id=5]
 [ext_resource path="res://assets/vehicle/vulcan.png" type="Texture" id=6]
-[ext_resource path="res://assets/vehicle/wheel.png" type="Texture" id=7]
+[ext_resource path="res://bullet.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/vehicle/wheel.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle-left"
@@ -239,6 +240,30 @@ tracks/18/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( -10.5599, -24.9668 ), Vector2( -10.5599, -24.9668 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("gattling/bullet:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -45, 15 ), Vector2( -45, 15 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -473,6 +498,30 @@ tracks/18/keys = {
 "update": 0,
 "values": [ Vector2( -10.5599, -24.9668 ), Vector2( -10.5599, -24.9668 ) ]
 }
+tracks/19/type = "value"
+tracks/19/path = NodePath("gattling/bullet:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 45, -15 ), Vector2( 45, -15 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "low-left"
@@ -706,6 +755,30 @@ tracks/18/keys = {
 "update": 0,
 "values": [ Vector2( -10.56, -7.967 ), Vector2( -10.56, -7.967 ) ]
 }
+tracks/19/type = "value"
+tracks/19/path = NodePath("gattling/bullet:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -45, 15 ), Vector2( -45, 15 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "low-right"
@@ -938,6 +1011,30 @@ tracks/18/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( -10.56, -7.967 ), Vector2( -10.56, -7.967 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("gattling/bullet:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 45, -15 ), Vector2( 45, -15 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -1196,8 +1293,32 @@ tracks/20/keys = {
 "update": 0,
 "values": [ Vector2( -10.5599, -24.9668 ), Vector2( -10.5599, -24.9668 ) ]
 }
+tracks/21/type = "value"
+tracks/21/path = NodePath("gattling/bullet:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -45, 15 ), Vector2( -45, 15 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=6]
 resource_name = "move-low-left"
 length = 0.5
 loop = true
@@ -1453,8 +1574,32 @@ tracks/20/keys = {
 "update": 0,
 "values": [ 0.0, -500.0 ]
 }
+tracks/21/type = "value"
+tracks/21/path = NodePath("gattling/bullet:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -45, 15 ), Vector2( -45, 15 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=7]
 resource_name = "move-low-right"
 length = 0.5
 loop = true
@@ -1710,8 +1855,32 @@ tracks/20/keys = {
 "update": 0,
 "values": [ 0.0, 500.0 ]
 }
+tracks/21/type = "value"
+tracks/21/path = NodePath("gattling/bullet:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 45, -15 ), Vector2( 45, -15 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -1966,11 +2135,35 @@ tracks/20/keys = {
 "update": 0,
 "values": [ Vector2( -10.5599, -24.9668 ), Vector2( -10.5599, -24.9668 ) ]
 }
+tracks/21/type = "value"
+tracks/21/path = NodePath("gattling/bullet:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 45, -15 ), Vector2( 45, -15 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
-[sub_resource type="CircleShape2D" id=7]
+[sub_resource type="CircleShape2D" id=9]
 radius = 4.39187
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 13.9028, 7.80762 )
 
 [node name="Vehicle" type="KinematicBody2D"]
@@ -1982,9 +2175,9 @@ anims/idle-right = SubResource( 2 )
 anims/low-left = SubResource( 3 )
 anims/low-right = SubResource( 4 )
 anims/move-left = SubResource( 5 )
-anims/move-low-left = SubResource( 9 )
-anims/move-low-right = SubResource( 10 )
-anims/move-right = SubResource( 6 )
+anims/move-low-left = SubResource( 6 )
+anims/move-low-right = SubResource( 7 )
+anims/move-right = SubResource( 8 )
 
 [node name="suspension - f" type="Sprite" parent="."]
 position = Vector2( 16.5944, 30.6678 )
@@ -2011,30 +2204,32 @@ texture = ExtResource( 5 )
 position = Vector2( 94.521, -31.885 )
 texture = ExtResource( 6 )
 
+[node name="bullet" parent="gattling" instance=ExtResource( 7 )]
+position = Vector2( 45, -15 )
+
 [node name="wheel - f" type="Sprite" parent="."]
 position = Vector2( 42.6354, 76.4939 )
-rotation = 3.52061
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="wheel - r" type="Sprite" parent="."]
 position = Vector2( -87.3647, 76.4939 )
-rotation = 3.52061
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="collision-wheel-r" type="CollisionShape2D" parent="."]
 position = Vector2( -87.175, 76.787 )
 scale = Vector2( 10, 10 )
-shape = SubResource( 7 )
+shape = SubResource( 9 )
 
 [node name="collision-wheel-f" type="CollisionShape2D" parent="."]
 position = Vector2( 42.825, 76.787 )
 scale = Vector2( 10, 10 )
-shape = SubResource( 7 )
+shape = SubResource( 9 )
 
 [node name="collision-body" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0.24, -45.137 )
 scale = Vector2( 10, 10 )
-shape = SubResource( 8 )
+shape = SubResource( 10 )
 
 [node name="ground-ray" type="RayCast2D" parent="."]
 enabled = true

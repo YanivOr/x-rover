@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 onready var ground_ray = get_node("ground-ray")
+onready var bulletAnimations = get_node("gattling/bullet/AnimationPlayer")
 
 const MOVE_SPEED = 800
 const GRAVITY = 20
@@ -65,6 +66,11 @@ func playerMovement():
 	if Input.is_action_just_released("ui_down") and on_floor:
 		movement.y = HIGH_JUMP_FORCE
 		is_low = false
+			
+	if Input.is_action_pressed("ui_space"):
+		bulletAnimations.play("shoot")
+	else:
+		bulletAnimations.play("idle")
 			
 	$AnimationPlayer.play(anim)
 	
