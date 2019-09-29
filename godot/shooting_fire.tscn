@@ -11,8 +11,8 @@ _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 76.032 ), 0.0, 0.0, 0, 0 
 curve = SubResource( 1 )
 
 [sub_resource type="Gradient" id=3]
-offsets = PoolRealArray( 0, 0.13535, 0.213376, 1 )
-colors = PoolColorArray( 0.988235, 0.0823529, 0.0823529, 1, 0.886275, 0.627451, 0.109804, 1, 0.901961, 0.572549, 0.133333, 1, 1, 0.211765, 0.211765, 1 )
+offsets = PoolRealArray( 0, 4.48416e-44, 0.13535, 0.213376, 1 )
+colors = PoolColorArray( 0.968627, 0.52549, 0.0980392, 1, 0.956863, 0.862745, 0.580392, 1, 0.886275, 0.627451, 0.109804, 1, 0.901961, 0.572549, 0.133333, 1, 1, 0.211765, 0.211765, 1 )
 
 [sub_resource type="GradientTexture" id=4]
 gradient = SubResource( 3 )
@@ -28,7 +28,6 @@ emission_shape = 1
 emission_sphere_radius = 8.0
 flag_disable_z = true
 gravity = Vector3( 0, -150, 0 )
-angular_velocity = 0.0
 angular_velocity_curve = SubResource( 2 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0

@@ -124,6 +124,7 @@ points = PoolVector2Array( 5.50919, 4.12033, 18.2407, 7.01385, 30.3935, 11.0648,
 [node name="Level 1" type="Node2D"]
 
 [node name="bg-layer-1" type="Sprite" parent="."]
+visible = false
 position = Vector2( -1.07104, 3.11249 )
 texture = ExtResource( 1 )
 

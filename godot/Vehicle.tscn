@@ -1,14 +1,15 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Vehicle.gd" type="Script" id=1]
 [ext_resource path="res://assets/vehicle/suspension.png" type="Texture" id=2]
 [ext_resource path="res://assets/vehicle/chasis.png" type="Texture" id=3]
 [ext_resource path="res://assets/vehicle/exhaust.png" type="Texture" id=4]
-[ext_resource path="res://assets/vehicle/flashlight.png" type="Texture" id=5]
-[ext_resource path="res://assets/vehicle/vulcan.png" type="Texture" id=6]
-[ext_resource path="res://bullet.tscn" type="PackedScene" id=7]
-[ext_resource path="res://shooting_fire.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/vehicle/wheel.png" type="Texture" id=9]
+[ext_resource path="res://exhaust-smoke.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/vehicle/flashlight.png" type="Texture" id=6]
+[ext_resource path="res://assets/vehicle/vulcan.png" type="Texture" id=7]
+[ext_resource path="res://bullet.tscn" type="PackedScene" id=8]
+[ext_resource path="res://shooting_fire.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/vehicle/wheel.png" type="Texture" id=10]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle-left"
@@ -285,6 +286,30 @@ tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -571,6 +596,30 @@ tracks/22/keys = {
 "update": 0,
 "values": [ 0.0, 0.0 ]
 }
+tracks/23/type = "value"
+tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "low-left"
@@ -852,6 +901,30 @@ tracks/22/keys = {
 "update": 0,
 "values": [ 180.0, 180.0 ]
 }
+tracks/23/type = "value"
+tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "low-right"
@@ -1128,6 +1201,30 @@ tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -1438,6 +1535,30 @@ tracks/24/keys = {
 "update": 0,
 "values": [ 180.0, 180.0 ]
 }
+tracks/25/type = "value"
+tracks/25/path = NodePath("exhaust/exhaust-smoke:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "move-low-left"
@@ -1738,6 +1859,30 @@ tracks/24/loop_wrap = true
 tracks/24/imported = false
 tracks/24/enabled = true
 tracks/24/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 180.0, 180.0 ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("exhaust/exhaust-smoke:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -2048,6 +2193,30 @@ tracks/24/keys = {
 "update": 0,
 "values": [ 0.0, 0.0 ]
 }
+tracks/25/type = "value"
+tracks/25/path = NodePath("exhaust/exhaust-smoke:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
 [sub_resource type="Animation" id=8]
 length = 0.5
@@ -2352,6 +2521,30 @@ tracks/24/keys = {
 "update": 0,
 "values": [ 0.0, 0.0 ]
 }
+tracks/25/type = "value"
+tracks/25/path = NodePath("exhaust/exhaust-smoke:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
 
 [sub_resource type="CircleShape2D" id=9]
 radius = 4.39187
@@ -2389,27 +2582,31 @@ texture = ExtResource( 3 )
 position = Vector2( -98.5409, -90.5788 )
 texture = ExtResource( 4 )
 
+[node name="exhaust-smoke" parent="exhaust" instance=ExtResource( 5 )]
+position = Vector2( 55, -15 )
+
 [node name="flashlight" type="Sprite" parent="."]
 position = Vector2( 23.9431, -79.9218 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="gattling" type="Sprite" parent="."]
 position = Vector2( 94.5211, -48.8848 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
-[node name="bullet" parent="gattling" instance=ExtResource( 7 )]
+[node name="bullet" parent="gattling" instance=ExtResource( 8 )]
 position = Vector2( 45, -15 )
 
-[node name="shooting_fire" parent="gattling" instance=ExtResource( 8 )]
-position = Vector2( 65, 0 )
+[node name="shooting_fire" parent="gattling" instance=ExtResource( 9 )]
+position = Vector2( 75, 0 )
 
 [node name="wheel - f" type="Sprite" parent="."]
 position = Vector2( 42.6354, 76.4939 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="wheel - r" type="Sprite" parent="."]
 position = Vector2( -87.3647, 76.4939 )
-texture = ExtResource( 9 )
+rotation = 2.44346
+texture = ExtResource( 10 )
 
 [node name="collision-wheel-r" type="CollisionShape2D" parent="."]
 position = Vector2( -87.175, 76.787 )
@@ -2422,7 +2619,6 @@ scale = Vector2( 10, 10 )
 shape = SubResource( 9 )
 
 [node name="collision-body" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 0.24, -45.137 )
 scale = Vector2( 10, 10 )
 shape = SubResource( 10 )

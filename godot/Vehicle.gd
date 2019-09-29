@@ -3,6 +3,7 @@ extends KinematicBody2D
 onready var ground_ray = get_node("ground-ray")
 onready var bulletAnimations = get_node("gattling/bullet/AnimationPlayer")
 onready var shootingFireAnimations = get_node("gattling/shooting_fire/AnimationPlayer")
+onready var exhaustSmokeAnimations = get_node("exhaust/exhaust-smoke/AnimationPlayer")
 
 const MOVE_SPEED = 800
 const GRAVITY = 20
@@ -21,6 +22,8 @@ func _physics_process(delta):
 	playerMovement()
 	
 func playerMovement():
+	exhaustSmokeAnimations.play("driving")
+			
 	if Input.is_action_pressed("ui_right"):
 		movement.x = MOVE_SPEED
 		dir = "right"
@@ -48,6 +51,8 @@ func playerMovement():
 	else:
 		movement.x = 0
 		is_low = false
+		
+		exhaustSmokeAnimations.play("idle")
 		
 		if dir == "right":
 			if is_low:
@@ -77,12 +82,12 @@ func playerMovement():
 			
 	$AnimationPlayer.play(anim)
 	
-	movement.y += GRAVITY
-	
 	if ground_ray.is_colliding():
 		on_floor = true
 	else:
 		on_floor = false
+	
+	movement.y += GRAVITY
 	
 	movement = move_and_slide(movement, FLOOR)
 	
