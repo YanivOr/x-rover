@@ -11,6 +11,7 @@ const FLOOR = Vector2(0, -1)
 var movement = Vector2(0, 0)
 var on_floor = false
 var dir = "right"
+var is_low = false
 var anim
 
 # warning-ignore:unused_argument
@@ -21,28 +22,50 @@ func playerMovement():
 	if Input.is_action_pressed("ui_right"):
 		movement.x = MOVE_SPEED
 		dir = "right"
-		anim = "move-right"
+		
+		if Input.is_action_pressed("ui_down") and on_floor:
+			anim = "move-low-right"
+			is_low = true
+		elif not is_low:
+			anim = "move-right"
 	elif Input.is_action_pressed("ui_left"):
 		movement.x = -MOVE_SPEED
 		dir = "left"
-		anim = "move-left"
+		
+		if Input.is_action_pressed("ui_down") and on_floor:
+			anim = "move-low-left"
+			is_low = true
+		elif not is_low:
+			anim = "move-left"
+		
+	elif Input.is_action_pressed("ui_down") and on_floor:
+		if anim == "idle-right":
+			anim = "low-right"
+		elif anim == "idle-left":
+			anim = "low-left"
 	else:
 		movement.x = 0
+		is_low = false
+		
 		if dir == "right":
-			anim = "idle-right"
+			if is_low:
+				anim = "low-right"
+			else:
+				anim = "idle-right"
 		else:
-			anim = "idle-left"
-			
+			if is_low:
+				anim = "low-left"
+			else:
+				anim = "idle-left"
+
 	if Input.is_action_pressed("ui_up") and on_floor:
 		movement.y = JUMP_FORCE
-	elif Input.is_action_pressed("ui_down") and on_floor:
-		if dir == "right":
-			anim = "low-right"
-		else:
-			anim = "low-left"
-	elif Input.is_action_just_released("ui_down") and on_floor:
-		movement.y = HIGH_JUMP_FORCE
+		is_low = false
 
+	if Input.is_action_just_released("ui_down") and on_floor:
+		movement.y = HIGH_JUMP_FORCE
+		is_low = false
+			
 	$AnimationPlayer.play(anim)
 	
 	movement.y += GRAVITY
@@ -53,5 +76,4 @@ func playerMovement():
 		on_floor = false
 	
 	movement = move_and_slide(movement, FLOOR)
-
 	
