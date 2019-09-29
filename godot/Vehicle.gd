@@ -1,6 +1,8 @@
 extends KinematicBody2D
 
-const MOVE_SPEED = 600
+onready var ground_ray = get_node("ground-ray")
+
+const MOVE_SPEED = 800
 const GRAVITY = 20
 const JUMP_FORCE = -700
 const HIGH_JUMP_FORCE = -1500
@@ -45,7 +47,7 @@ func playerMovement():
 	
 	movement.y += GRAVITY
 	
-	if is_on_floor():
+	if ground_ray.is_colliding():
 		on_floor = true
 	else:
 		on_floor = false
