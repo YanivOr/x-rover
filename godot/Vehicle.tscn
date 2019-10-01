@@ -253,7 +253,7 @@ tracks/19/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -45, 15 ), Vector2( -45, 15 ) ]
+"values": [ Vector2( -45, 0 ), Vector2( -45, 0 ) ]
 }
 tracks/20/type = "value"
 tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
@@ -558,7 +558,7 @@ tracks/19/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 45, -15 ), Vector2( 45, -15 ) ]
+"values": [ Vector2( 45, 0 ), Vector2( 45, 0 ) ]
 }
 tracks/20/type = "value"
 tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
@@ -863,7 +863,7 @@ tracks/19/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -45, 15 ), Vector2( -45, 15 ) ]
+"values": [ Vector2( -45, 0 ), Vector2( -45, 0 ) ]
 }
 tracks/20/type = "value"
 tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
@@ -1168,7 +1168,7 @@ tracks/19/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 45, -15 ), Vector2( 45, -15 ) ]
+"values": [ Vector2( 45, 0 ), Vector2( 45, 0 ) ]
 }
 tracks/20/type = "value"
 tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
@@ -1497,7 +1497,7 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -45, 15 ), Vector2( -45, 15 ) ]
+"values": [ Vector2( -45, 0 ), Vector2( -45, 0 ) ]
 }
 tracks/22/type = "value"
 tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
@@ -1826,7 +1826,7 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -45, 15 ), Vector2( -45, 15 ) ]
+"values": [ Vector2( -45, 0 ), Vector2( -45, 0 ) ]
 }
 tracks/22/type = "value"
 tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
@@ -2155,7 +2155,7 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 45, -15 ), Vector2( 45, -15 ) ]
+"values": [ Vector2( 45, 0 ), Vector2( 45, 0 ) ]
 }
 tracks/22/type = "value"
 tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
@@ -2483,7 +2483,7 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 45, -15 ), Vector2( 45, -15 ) ]
+"values": [ Vector2( 45, 0 ), Vector2( 45, 0 ) ]
 }
 tracks/22/type = "value"
 tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
@@ -2583,7 +2583,7 @@ position = Vector2( -98.5409, -90.5788 )
 texture = ExtResource( 4 )
 
 [node name="exhaust-smoke" parent="exhaust" instance=ExtResource( 5 )]
-position = Vector2( 55, -15 )
+position = Vector2( -55, -15 )
 
 [node name="flashlight" type="Sprite" parent="."]
 position = Vector2( 23.9431, -79.9218 )
@@ -2594,7 +2594,7 @@ position = Vector2( 94.5211, -48.8848 )
 texture = ExtResource( 7 )
 
 [node name="bullet" parent="gattling" instance=ExtResource( 8 )]
-position = Vector2( 45, -15 )
+position = Vector2( 45, 0 )
 
 [node name="shooting_fire" parent="gattling" instance=ExtResource( 9 )]
 position = Vector2( 75, 0 )

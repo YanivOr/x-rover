@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 onready var ground_ray = get_node("ground-ray")
-onready var bulletAnimations = get_node("gattling/bullet/AnimationPlayer")
 onready var shootingFireAnimations = get_node("gattling/shooting_fire/AnimationPlayer")
 onready var exhaustSmokeAnimations = get_node("exhaust/exhaust-smoke/AnimationPlayer")
 
@@ -74,10 +73,8 @@ func playerMovement():
 		is_low = false
 			
 	if Input.is_action_pressed("ui_space"):
-		bulletAnimations.play("shoot")
 		shootingFireAnimations.play("shooting")
 	else:
-		bulletAnimations.play("idle")
 		shootingFireAnimations.play("idle")
 			
 	$AnimationPlayer.play(anim)
