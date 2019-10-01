@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 onready var ground_ray = get_node("ground-ray")
-onready var exhaustSmokeAnimations = get_node("exhaust/exhaust-smoke/AnimationPlayer")
-onready var shootingFireAnimations = get_node("gattling/shooting_fire/AnimationPlayer")
+onready var exhaust_smoke_animations = get_node("exhaust/exhaust-smoke/AnimationPlayer")
+onready var shooting_fire_animations = get_node("gattling/shooting_fire/AnimationPlayer")
 
 const MOVE_SPEED = 800
 const GRAVITY = 20
@@ -17,13 +17,13 @@ var dir = "right"
 var is_low = false
 var anim
 var bullet_dir
+var shoot_time = 0
 
 # warning-ignore:unused_argument
 func _physics_process(delta):
-	playerMovement()
+	shoot_time += delta
 	
-func playerMovement():
-	exhaustSmokeAnimations.play("driving")
+	exhaust_smoke_animations.play("driving")
 			
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = MOVE_SPEED
@@ -53,7 +53,7 @@ func playerMovement():
 		velocity.x = 0
 		is_low = false
 		
-		exhaustSmokeAnimations.play("idle")
+		exhaust_smoke_animations.play("idle")
 		
 		if dir == "right":
 			if is_low:
@@ -75,6 +75,11 @@ func playerMovement():
 		is_low = false
 			
 	if Input.is_action_pressed("ui_space"):
+		shooting_fire_animations.play("shooting")
+	else:
+		shooting_fire_animations.play("idle")
+		
+	if Input.is_action_pressed("ui_space") and shoot_time > 0.2:
 		var bullet = preload("res://bullet.tscn").instance()
 		
 		if dir == "right":
@@ -89,9 +94,8 @@ func playerMovement():
 		bullet.linear_velocity = Vector2(bullet_dir * BULLET_VELOCITY, 0)
 		bullet.add_collision_exception_with(self)
 		get_parent().add_child(bullet)
-		shootingFireAnimations.play("shooting")
-	else:
-		shootingFireAnimations.play("idle")
+
+		shoot_time = 0
 			
 	$AnimationPlayer.play(anim)
 	
