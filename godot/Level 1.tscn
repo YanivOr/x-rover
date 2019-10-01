@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/bg/bg-layer-1.png" type="Texture" id=1]
-[ext_resource path="res://Vehicle.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Camera2D.gd" type="Script" id=3]
-[ext_resource path="res://assets/tiles/main-tiles.png" type="Texture" id=4]
+[ext_resource path="res://Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://assets/tiles/main-tiles.png" type="Texture" id=3]
+[ext_resource path="res://Vehicle.tscn" type="PackedScene" id=4]
+[ext_resource path="res://area2d-test.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 198.333, 7.93982, 197.755, 105.162, 68.125, 105.162, 25.3009, 101.69, 17.7778, 97.0602, 13.1481, 86.0648, 9.0972, 72.1759, 11.9907, 57.1296, 17.7778, 41.5046, 24.1435, 32.2454, 37.4537, 21.8287, 47.8704, 17.1991, 58.287, 16.6204, 73.912, 14.3056, 83.75, 14.3056, 90.6944, 10.8333, 97.6389, 7.36111, 116.736, 3.88889, 124.838, 6.2037, 139.306, 6.78241, 152.616, 10.8333, 170.556, 7.36111, 180.393, 7.93982 )
@@ -25,7 +26,7 @@ points = PoolVector2Array( 5.50919, 4.12033, 18.2407, 7.01385, 30.3935, 11.0648,
 
 [sub_resource type="TileSet" id=7]
 0/name = "main-tiles.png 0"
-0/texture = ExtResource( 4 )
+0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 200, 200 )
@@ -41,7 +42,7 @@ points = PoolVector2Array( 5.50919, 4.12033, 18.2407, 7.01385, 30.3935, 11.0648,
 } ]
 0/z_index = 0
 1/name = "main-tiles.png 1"
-1/texture = ExtResource( 4 )
+1/texture = ExtResource( 3 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 200, 0, 200, 200 )
@@ -57,7 +58,7 @@ points = PoolVector2Array( 5.50919, 4.12033, 18.2407, 7.01385, 30.3935, 11.0648,
 } ]
 1/z_index = 0
 2/name = "main-tiles.png 2"
-2/texture = ExtResource( 4 )
+2/texture = ExtResource( 3 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 400, 0, 200, 200 )
@@ -73,7 +74,7 @@ points = PoolVector2Array( 5.50919, 4.12033, 18.2407, 7.01385, 30.3935, 11.0648,
 } ]
 2/z_index = 0
 3/name = "main-tiles.png 3"
-3/texture = ExtResource( 4 )
+3/texture = ExtResource( 3 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 200, 200, 200 )
@@ -89,7 +90,7 @@ points = PoolVector2Array( 5.50919, 4.12033, 18.2407, 7.01385, 30.3935, 11.0648,
 } ]
 3/z_index = 0
 4/name = "main-tiles.png 4"
-4/texture = ExtResource( 4 )
+4/texture = ExtResource( 3 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 200, 200, 200, 200 )
@@ -105,7 +106,7 @@ points = PoolVector2Array( 5.50919, 4.12033, 18.2407, 7.01385, 30.3935, 11.0648,
 } ]
 4/z_index = 0
 5/name = "main-tiles.png 5"
-5/texture = ExtResource( 4 )
+5/texture = ExtResource( 3 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 400, 200, 200, 200 )
@@ -128,17 +129,20 @@ visible = false
 position = Vector2( -1.07104, 3.11249 )
 texture = ExtResource( 1 )
 
-[node name="Vehicle" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1996.06, 1916.03 )
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 511.079, 300.635 )
 current = true
 zoom = Vector2( 2, 2 )
 process_mode = 0
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 7 )
 format = 1
-tile_data = PoolIntArray( 1114072, 4, 0, 1245144, 4, 0, 1376216, 4, 0, 1507288, 4, 0, 1638360, 4, 0, 1769432, 4, 0, 1900504, 4, 0, 2031576, 4, 0, 2162648, 4, 0, 2293720, 4, 0, 2424792, 4, 0, 2555864, 4, 0, 2555866, 4, 0, 2555869, 4, 0, 2555872, 4, 0, 2555875, 4, 0, 2555878, 4, 0, 2555881, 4, 0, 2555884, 4, 0, 2555886, 4, 0, 2555889, 4, 0, 2555892, 4, 0, 2555896, 4, 0, 2555899, 4, 0, 2555902, 4, 0, 2490369, 4, 0, 2490372, 4, 0, 2490375, 4, 0, 2490378, 4, 0, 2490381, 4, 0, 2490384, 4, 0, 2490387, 4, 0, 2490390, 4, 0, 2490393, 4, 0, 2490396, 4, 0, 2490399, 4, 0, 2490402, 4, 0, 2490405, 4, 0 )
+tile_data = PoolIntArray( 786426, 0, 0, 786427, 0, 0, 786428, 0, 0, 786429, 0, 0, 786430, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 851966, 0, 0, 851967, 0, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786451, 0, 0 )
+
+[node name="Vehicle" parent="." instance=ExtResource( 4 )]
+position = Vector2( 245.729, 442.313 )
+
+[node name="area2d-test" parent="." instance=ExtResource( 5 )]
+position = Vector2( 493.928, 477.494 )

@@ -1,20 +1,22 @@
 extends KinematicBody2D
 
 onready var ground_ray = get_node("ground-ray")
-onready var shootingFireAnimations = get_node("gattling/shooting_fire/AnimationPlayer")
 onready var exhaustSmokeAnimations = get_node("exhaust/exhaust-smoke/AnimationPlayer")
+onready var shootingFireAnimations = get_node("gattling/shooting_fire/AnimationPlayer")
 
 const MOVE_SPEED = 800
 const GRAVITY = 20
 const JUMP_FORCE = -700
 const HIGH_JUMP_FORCE = -1500
 const FLOOR = Vector2(0, -1)
+const BULLET_VELOCITY = 3000
 
 var velocity = Vector2(0, 0)
 var on_floor = false
 var dir = "right"
 var is_low = false
 var anim
+var bullet_velocity
 
 # warning-ignore:unused_argument
 func _physics_process(delta):
@@ -73,6 +75,19 @@ func playerMovement():
 		is_low = false
 			
 	if Input.is_action_pressed("ui_space"):
+		var bullet = preload("res://bullet.tscn").instance()
+		
+		if dir == "right":
+			bullet_velocity = 1
+			bullet.get_node("Sprite").set_flip_h(false)
+		else:
+			bullet_velocity = -1
+			bullet.get_node("Sprite").set_flip_h(true)
+		
+		bullet.position = $gattling.global_position
+		bullet.linear_velocity = Vector2(bullet_velocity * BULLET_VELOCITY, 0)
+		bullet.add_collision_exception_with(self)
+		get_parent().add_child(bullet)
 		shootingFireAnimations.play("shooting")
 	else:
 		shootingFireAnimations.play("idle")

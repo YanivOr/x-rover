@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Vehicle.gd" type="Script" id=1]
 [ext_resource path="res://assets/vehicle/suspension.png" type="Texture" id=2]
@@ -7,9 +7,8 @@
 [ext_resource path="res://exhaust-smoke.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/vehicle/flashlight.png" type="Texture" id=6]
 [ext_resource path="res://assets/vehicle/vulcan.png" type="Texture" id=7]
-[ext_resource path="res://bullet.tscn" type="PackedScene" id=8]
-[ext_resource path="res://shooting_fire.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/vehicle/wheel.png" type="Texture" id=10]
+[ext_resource path="res://shooting_fire.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/vehicle/wheel.png" type="Texture" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle-left"
@@ -244,7 +243,7 @@ tracks/18/keys = {
 "values": [ Vector2( -10.5599, -24.9668 ), Vector2( -10.5599, -24.9668 ) ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("gattling/bullet:position")
+tracks/19/path = NodePath("gattling/shooting_fire:position")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -253,10 +252,10 @@ tracks/19/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -45, 0 ), Vector2( -45, 0 ) ]
+"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/20/path = NodePath("gattling/shooting_fire:rotation_degrees")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/imported = false
@@ -268,7 +267,7 @@ tracks/20/keys = {
 "values": [ 180.0, 180.0 ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("gattling/shooting_fire:position")
+tracks/21/path = NodePath("exhaust/exhaust-smoke:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -277,39 +276,15 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
+"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/22/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 180.0, 180.0 ]
-}
-tracks/23/type = "value"
-tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
-}
-tracks/24/type = "value"
-tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -549,7 +524,7 @@ tracks/18/keys = {
 "values": [ Vector2( -10.5599, -24.9668 ), Vector2( -10.5599, -24.9668 ) ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("gattling/bullet:position")
+tracks/19/path = NodePath("gattling/shooting_fire:position")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -558,10 +533,10 @@ tracks/19/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 45, 0 ), Vector2( 45, 0 ) ]
+"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/20/path = NodePath("gattling/shooting_fire:rotation_degrees")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/imported = false
@@ -573,7 +548,7 @@ tracks/20/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("gattling/shooting_fire:position")
+tracks/21/path = NodePath("exhaust/exhaust-smoke:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -582,39 +557,15 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
+"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/22/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0 ]
-}
-tracks/23/type = "value"
-tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
-}
-tracks/24/type = "value"
-tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -854,7 +805,7 @@ tracks/18/keys = {
 "values": [ Vector2( -10.56, -7.967 ), Vector2( -10.56, -7.967 ) ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("gattling/bullet:position")
+tracks/19/path = NodePath("gattling/shooting_fire:position")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -863,10 +814,10 @@ tracks/19/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -45, 0 ), Vector2( -45, 0 ) ]
+"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/20/path = NodePath("gattling/shooting_fire:rotation_degrees")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/imported = false
@@ -878,7 +829,7 @@ tracks/20/keys = {
 "values": [ 180.0, 180.0 ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("gattling/shooting_fire:position")
+tracks/21/path = NodePath("exhaust/exhaust-smoke:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -887,39 +838,15 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
+"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/22/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 180.0, 180.0 ]
-}
-tracks/23/type = "value"
-tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
-}
-tracks/24/type = "value"
-tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -1159,7 +1086,7 @@ tracks/18/keys = {
 "values": [ Vector2( -10.56, -7.967 ), Vector2( -10.56, -7.967 ) ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("gattling/bullet:position")
+tracks/19/path = NodePath("gattling/shooting_fire:position")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -1168,10 +1095,10 @@ tracks/19/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 45, 0 ), Vector2( 45, 0 ) ]
+"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/20/path = NodePath("gattling/shooting_fire:rotation_degrees")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/imported = false
@@ -1183,7 +1110,7 @@ tracks/20/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("gattling/shooting_fire:position")
+tracks/21/path = NodePath("exhaust/exhaust-smoke:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -1192,39 +1119,15 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
+"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/22/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0 ]
-}
-tracks/23/type = "value"
-tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
-}
-tracks/24/type = "value"
-tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -1488,7 +1391,7 @@ tracks/20/keys = {
 "values": [ Vector2( -10.5599, -24.9668 ), Vector2( -10.5599, -24.9668 ) ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("gattling/bullet:position")
+tracks/21/path = NodePath("gattling/shooting_fire:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -1497,10 +1400,10 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -45, 0 ), Vector2( -45, 0 ) ]
+"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/imported = false
@@ -1512,7 +1415,7 @@ tracks/22/keys = {
 "values": [ 180.0, 180.0 ]
 }
 tracks/23/type = "value"
-tracks/23/path = NodePath("gattling/shooting_fire:position")
+tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/imported = false
@@ -1521,39 +1424,15 @@ tracks/23/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
+"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
 }
 tracks/24/type = "value"
-tracks/24/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/imported = false
 tracks/24/enabled = true
 tracks/24/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 180.0, 180.0 ]
-}
-tracks/25/type = "value"
-tracks/25/path = NodePath("exhaust/exhaust-smoke:position")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/imported = false
-tracks/25/enabled = true
-tracks/25/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
-}
-tracks/26/type = "value"
-tracks/26/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
-tracks/26/interp = 1
-tracks/26/loop_wrap = true
-tracks/26/imported = false
-tracks/26/enabled = true
-tracks/26/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -1817,7 +1696,7 @@ tracks/20/keys = {
 "values": [ 0.0, -500.0 ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("gattling/bullet:position")
+tracks/21/path = NodePath("gattling/shooting_fire:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -1826,10 +1705,10 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -45, 0 ), Vector2( -45, 0 ) ]
+"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/imported = false
@@ -1841,7 +1720,7 @@ tracks/22/keys = {
 "values": [ 180.0, 180.0 ]
 }
 tracks/23/type = "value"
-tracks/23/path = NodePath("gattling/shooting_fire:position")
+tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/imported = false
@@ -1850,39 +1729,15 @@ tracks/23/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -75, 0 ), Vector2( -75, 0 ) ]
+"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
 }
 tracks/24/type = "value"
-tracks/24/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/imported = false
 tracks/24/enabled = true
 tracks/24/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 180.0, 180.0 ]
-}
-tracks/25/type = "value"
-tracks/25/path = NodePath("exhaust/exhaust-smoke:position")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/imported = false
-tracks/25/enabled = true
-tracks/25/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 55, -15 ), Vector2( 55, -15 ) ]
-}
-tracks/26/type = "value"
-tracks/26/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
-tracks/26/interp = 1
-tracks/26/loop_wrap = true
-tracks/26/imported = false
-tracks/26/enabled = true
-tracks/26/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -2146,7 +2001,7 @@ tracks/20/keys = {
 "values": [ 0.0, 500.0 ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("gattling/bullet:position")
+tracks/21/path = NodePath("gattling/shooting_fire:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -2155,10 +2010,10 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 45, 0 ), Vector2( 45, 0 ) ]
+"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/imported = false
@@ -2170,7 +2025,7 @@ tracks/22/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/23/type = "value"
-tracks/23/path = NodePath("gattling/shooting_fire:position")
+tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/imported = false
@@ -2179,39 +2034,15 @@ tracks/23/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
+"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
 }
 tracks/24/type = "value"
-tracks/24/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/imported = false
 tracks/24/enabled = true
 tracks/24/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0 ]
-}
-tracks/25/type = "value"
-tracks/25/path = NodePath("exhaust/exhaust-smoke:position")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/imported = false
-tracks/25/enabled = true
-tracks/25/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
-}
-tracks/26/type = "value"
-tracks/26/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
-tracks/26/interp = 1
-tracks/26/loop_wrap = true
-tracks/26/imported = false
-tracks/26/enabled = true
-tracks/26/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -2474,7 +2305,7 @@ tracks/20/keys = {
 "values": [ Vector2( -10.5599, -24.9668 ), Vector2( -10.5599, -24.9668 ) ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("gattling/bullet:position")
+tracks/21/path = NodePath("gattling/shooting_fire:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -2483,10 +2314,10 @@ tracks/21/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 45, 0 ), Vector2( 45, 0 ) ]
+"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("gattling/bullet:rotation_degrees")
+tracks/22/path = NodePath("gattling/shooting_fire:rotation_degrees")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/imported = false
@@ -2498,7 +2329,7 @@ tracks/22/keys = {
 "values": [ 0.0, 0.0 ]
 }
 tracks/23/type = "value"
-tracks/23/path = NodePath("gattling/shooting_fire:position")
+tracks/23/path = NodePath("exhaust/exhaust-smoke:position")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/imported = false
@@ -2507,39 +2338,15 @@ tracks/23/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 75, 0 ), Vector2( 75, 0 ) ]
+"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
 }
 tracks/24/type = "value"
-tracks/24/path = NodePath("gattling/shooting_fire:rotation_degrees")
+tracks/24/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/imported = false
 tracks/24/enabled = true
 tracks/24/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0.0, 0.0 ]
-}
-tracks/25/type = "value"
-tracks/25/path = NodePath("exhaust/exhaust-smoke:position")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/imported = false
-tracks/25/enabled = true
-tracks/25/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( -55, -15 ), Vector2( -55, -15 ) ]
-}
-tracks/26/type = "value"
-tracks/26/path = NodePath("exhaust/exhaust-smoke:rotation_degrees")
-tracks/26/interp = 1
-tracks/26/loop_wrap = true
-tracks/26/imported = false
-tracks/26/enabled = true
-tracks/26/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -2593,20 +2400,17 @@ texture = ExtResource( 6 )
 position = Vector2( 94.5211, -48.8848 )
 texture = ExtResource( 7 )
 
-[node name="bullet" parent="gattling" instance=ExtResource( 8 )]
-position = Vector2( 45, 0 )
-
-[node name="shooting_fire" parent="gattling" instance=ExtResource( 9 )]
+[node name="shooting_fire" parent="gattling" instance=ExtResource( 8 )]
 position = Vector2( 75, 0 )
 
 [node name="wheel - f" type="Sprite" parent="."]
 position = Vector2( 42.6354, 76.4939 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="wheel - r" type="Sprite" parent="."]
 position = Vector2( -87.3647, 76.4939 )
 rotation = 2.44346
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="collision-wheel-r" type="CollisionShape2D" parent="."]
 position = Vector2( -87.175, 76.787 )
