@@ -11,7 +11,7 @@ const JUMP_FORCE = -700
 const HIGH_JUMP_FORCE = -1500
 const FLOOR = Vector2(0, -1)
 
-var movement = Vector2(0, 0)
+var velocity = Vector2(0, 0)
 var on_floor = false
 var dir = "right"
 var is_low = false
@@ -25,7 +25,7 @@ func playerMovement():
 	exhaustSmokeAnimations.play("driving")
 			
 	if Input.is_action_pressed("ui_right"):
-		movement.x = MOVE_SPEED
+		velocity.x = MOVE_SPEED
 		dir = "right"
 		
 		if Input.is_action_pressed("ui_down") and on_floor:
@@ -34,7 +34,7 @@ func playerMovement():
 		elif not is_low:
 			anim = "move-right"
 	elif Input.is_action_pressed("ui_left"):
-		movement.x = -MOVE_SPEED
+		velocity.x = -MOVE_SPEED
 		dir = "left"
 		
 		if Input.is_action_pressed("ui_down") and on_floor:
@@ -49,7 +49,7 @@ func playerMovement():
 		elif anim == "idle-left":
 			anim = "low-left"
 	else:
-		movement.x = 0
+		velocity.x = 0
 		is_low = false
 		
 		exhaustSmokeAnimations.play("idle")
@@ -66,11 +66,11 @@ func playerMovement():
 				anim = "idle-left"
 
 	if Input.is_action_pressed("ui_up") and on_floor:
-		movement.y = JUMP_FORCE
+		velocity.y = JUMP_FORCE
 		is_low = false
 
 	if Input.is_action_just_released("ui_down") and on_floor:
-		movement.y = HIGH_JUMP_FORCE
+		velocity.y = HIGH_JUMP_FORCE
 		is_low = false
 			
 	if Input.is_action_pressed("ui_space"):
@@ -87,7 +87,7 @@ func playerMovement():
 	else:
 		on_floor = false
 	
-	movement.y += GRAVITY
+	velocity.y += GRAVITY
 	
-	movement = move_and_slide(movement, FLOOR)
+	velocity = move_and_slide(velocity, FLOOR)
 	
