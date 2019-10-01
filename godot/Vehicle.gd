@@ -16,7 +16,7 @@ var on_floor = false
 var dir = "right"
 var is_low = false
 var anim
-var bullet_velocity
+var bullet_dir
 
 # warning-ignore:unused_argument
 func _physics_process(delta):
@@ -78,14 +78,15 @@ func playerMovement():
 		var bullet = preload("res://bullet.tscn").instance()
 		
 		if dir == "right":
-			bullet_velocity = 1
+			bullet_dir = 1
 			bullet.get_node("Sprite").set_flip_h(false)
 		else:
-			bullet_velocity = -1
+			bullet_dir = -1
 			bullet.get_node("Sprite").set_flip_h(true)
 		
 		bullet.position = $gattling.global_position
-		bullet.linear_velocity = Vector2(bullet_velocity * BULLET_VELOCITY, 0)
+		bullet.position.x += 40 * bullet_dir
+		bullet.linear_velocity = Vector2(bullet_dir * BULLET_VELOCITY, 0)
 		bullet.add_collision_exception_with(self)
 		get_parent().add_child(bullet)
 		shootingFireAnimations.play("shooting")
