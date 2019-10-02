@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/vehicle.png-479af03e951de4bb0cb3a124991dfe86.stex"
+path="res://.import/bullet.png-4a803b64add5218cff27f877d1b083db.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/vehicle/vehicle.png"
-dest_files=[ "res://.import/vehicle.png-479af03e951de4bb0cb3a124991dfe86.stex" ]
+source_file="res://assets/vehicle/bullet.png"
+dest_files=[ "res://.import/bullet.png-4a803b64add5218cff27f877d1b083db.stex" ]
 
 [params]
 

@@ -17,11 +17,12 @@ var dir = "right"
 var is_low = false
 var anim
 var bullet_dir
-var shoot_time = 0
+var shooting_time = 0
+var shooting_interval = 0.15
 
 # warning-ignore:unused_argument
 func _physics_process(delta):
-	shoot_time += delta
+	shooting_time += delta
 	
 	exhaust_smoke_animations.play("driving")
 			
@@ -79,7 +80,7 @@ func _physics_process(delta):
 	else:
 		shooting_fire_animations.play("idle")
 		
-	if Input.is_action_pressed("ui_space") and shoot_time > 0.2:
+	if Input.is_action_pressed("ui_space") and shooting_time > shooting_interval:
 		var bullet = preload("res://bullet.tscn").instance()
 		
 		if dir == "right":
@@ -95,7 +96,7 @@ func _physics_process(delta):
 		bullet.add_collision_exception_with(self)
 		get_parent().add_child(bullet)
 
-		shoot_time = 0
+		shooting_time = 0
 			
 	$AnimationPlayer.play(anim)
 	
