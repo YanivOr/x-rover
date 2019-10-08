@@ -32,5 +32,8 @@ tile_data = PoolIntArray( 131080, 536870916, 0, 131081, 536870916, 0, 131082, 53
 [node name="enemy-1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2842.8, 11996.8 )
 
+[node name="enemy-2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8791.49, 10724.5 )
+
 [node name="Vehicle" parent="." instance=ExtResource( 5 )]
 position = Vector2( 674.29, 11443.3 )

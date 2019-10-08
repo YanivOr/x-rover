@@ -6,7 +6,7 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.name == 'TileMap':
 			pass
-		elif body.name == 'enemy-1':
+		elif body.name == 'enemy-1' or body.name == 'enemy-2':
 			body.call('gotShot')
 			pass
 		else:
