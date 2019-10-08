@@ -6,13 +6,12 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.name == 'TileMap':
 			pass
-		elif body.name == 'enemy-1':
-			body.call('gotShot')
+		elif body.name == 'Vehicle':
 			pass
 		else:
 			pass
-			
+
 		queue_free()
-			
+
 func _on_Timer_timeout():
 	queue_free()
