@@ -12,16 +12,19 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), null ],
 "loop": false,
-"name": "exp-1",
-"speed": 12.0
+"name": "explode",
+"speed": 13.0
 } ]
 
 [node name="Explosion-1" type="AnimatedSprite"]
-position = Vector2( -2.58472, -1.29236 )
-scale = Vector2( 1.48654, 1.48654 )
+position = Vector2( -1.50735, -1.50735 )
+scale = Vector2( 2.24135, 2.24135 )
 frames = SubResource( 1 )
-animation = "exp-1"
-frame = 8
-playing = true
+animation = "explode"

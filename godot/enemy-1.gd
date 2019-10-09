@@ -21,9 +21,9 @@ func _physics_process(delta):
 		shooting_time = 0
 
 func gotShot():
-	queue_free()
-	
 	var explosion = preload("res://Explosion-1.tscn").instance()
 	explosion.position = global_position
-	explosion.animation = "exp-1"
+	explosion.frame = 0
+	explosion.play("explode")
 	get_parent().add_child(explosion)
+	queue_free()
