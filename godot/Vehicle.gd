@@ -4,12 +4,12 @@ onready var ground_ray = get_node("ground-ray")
 onready var exhaust_smoke_animations = get_node("exhaust/exhaust-smoke/AnimationPlayer")
 onready var shooting_fire_animations = get_node("gattling/shooting_fire/AnimationPlayer")
 
-const MOVE_SPEED = 800
-const GRAVITY = 20
-const JUMP_FORCE = -700
-const HIGH_JUMP_FORCE = -1500
+const MOVE_SPEED = 1500
+const GRAVITY = 60
+const JUMP_FORCE = -1500
+const HIGH_JUMP_FORCE = -3000
 const FLOOR = Vector2(0, -1)
-const BULLET_VELOCITY = 3000
+const BULLET_VELOCITY = 6000
 
 var velocity = Vector2(0, 0)
 var on_floor = false

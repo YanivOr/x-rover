@@ -6,7 +6,7 @@ var shooting_time = 0
 
 func _physics_process(delta):
 	shooting_time += delta
-	var shooting_interval = randf() * 11
+	var shooting_interval = randf() * 15 + 1.5
 	
 	if shooting_time > shooting_interval:
 		var bullet_enemy = preload("res://bullet-enemy-111.tscn").instance()
@@ -22,3 +22,8 @@ func _physics_process(delta):
 
 func gotShot():
 	queue_free()
+	
+	var explosion = preload("res://Explosion-1.tscn").instance()
+	explosion.position = global_position
+	explosion.animation = "exp-1"
+	get_parent().add_child(explosion)
