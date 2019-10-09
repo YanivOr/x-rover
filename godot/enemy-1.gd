@@ -12,6 +12,11 @@ func _physics_process(delta):
 		var bullet_enemy = preload("res://bullet-enemy-111.tscn").instance()
 		var bullet_enemy_dir = -1
 		bullet_enemy.get_node("Sprite").set_flip_h(true)
+		
+		if scale.x > 0:
+			bullet_enemy_dir = 1
+			bullet_enemy.get_node("Sprite").set_flip_h(false)
+
 		bullet_enemy.position = global_position
 		bullet_enemy.position.x += 160 * bullet_enemy_dir
 		bullet_enemy.position.y -= 77
@@ -27,3 +32,4 @@ func gotShot():
 	explosion.play("explode")
 	get_parent().add_child(explosion)
 	queue_free()
+	global.incrementScore()

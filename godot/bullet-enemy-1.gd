@@ -7,6 +7,8 @@ func _physics_process(delta):
 		if body.name == 'TileMap':
 			pass
 		elif body.name == 'Vehicle':
+			global.decrementLives()
+			get_tree().reload_current_scene()
 			pass
 		else:
 			pass
