@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Camera2D.gd" type="Script" id=1]
 [ext_resource path="res://enemy-1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Vehicle.tscn" type="PackedScene" id=5]
-[ext_resource path="res://potion.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Potion.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Key.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Vehicle.tscn" type="PackedScene" id=8]
 
 [node name="Level 1" type="Node2D"]
 
@@ -59,35 +60,38 @@ position = Vector2( 7951.2, 512.775 )
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
 
-[node name="Vehicle" parent="." instance=ExtResource( 5 )]
+[node name="potion1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 11298.9, 12338 )
+
+[node name="potion2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8589.71, 9965.56 )
+
+[node name="potion3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 10945.3, 9655.74 )
+
+[node name="potion4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 11171, 9655.74 )
+
+[node name="potion5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8968.79, 8937.16 )
+
+[node name="Coin1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 9399.74, 12749.2 )
+
+[node name="Coin2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 8167.3, 9966.68 )
+
+[node name="Coin3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 8377.4, 9966.9 )
+
+[node name="Coin4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 14159, 6258.41 )
+
+[node name="Coin5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10921.9, 6772.99 )
+
+[node name="Key" parent="." instance=ExtResource( 7 )]
+position = Vector2( 10824.2, 12341.8 )
+
+[node name="Vehicle" parent="." instance=ExtResource( 8 )]
 position = Vector2( 8412.36, 10693.6 )
-
-[node name="potion" parent="." instance=ExtResource( 6 )]
-position = Vector2( 11298.9, 12362 )
-
-[node name="Coin" parent="potion" instance=ExtResource( 7 )]
-position = Vector2( -1899.13, 416.192 )
-
-[node name="Coin2" parent="potion" instance=ExtResource( 7 )]
-position = Vector2( -3131.58, -2375.3 )
-
-[node name="Coin3" parent="potion" instance=ExtResource( 7 )]
-position = Vector2( -2921.48, -2383.08 )
-
-[node name="potion" parent="potion" instance=ExtResource( 6 )]
-position = Vector2( -2719.16, -2388.43 )
-
-[node name="potion2" parent="potion" instance=ExtResource( 6 )]
-position = Vector2( -353.606, -2733.25 )
-
-[node name="potion3" parent="potion" instance=ExtResource( 6 )]
-position = Vector2( 82.1543, -2733.25 )
-
-[node name="potion4" parent="potion" instance=ExtResource( 6 )]
-position = Vector2( -2330.09, -3495.83 )
-
-[node name="Coin4" parent="potion" instance=ExtResource( 7 )]
-position = Vector2( 2860.13, -6075.58 )
-
-[node name="Coin5" parent="potion" instance=ExtResource( 7 )]
-position = Vector2( -376.95, -5562 )
