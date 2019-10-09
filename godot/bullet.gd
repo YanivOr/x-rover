@@ -4,13 +4,8 @@ func _physics_process(delta):
 	var bodies = get_colliding_bodies()
 	
 	for body in bodies:
-		if body.name == 'TileMap':
-			pass
-		elif body.name == 'enemy-1' or body.name == 'enemy-2':
-			body.call('gotShot')
-			pass
-		else:
-			pass
+		if body.has_method("gotShot"):
+			body.call("gotShot")
 			
 		queue_free()
 			
