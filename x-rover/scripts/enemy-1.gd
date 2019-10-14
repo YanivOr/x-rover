@@ -13,7 +13,7 @@ func _physics_process(delta):
 		var bullet_enemy_dir = -1
 		bullet_enemy.get_node("Sprite").set_flip_h(true)
 		
-		if scale.x > 0:
+		if scale.y > 0:
 			bullet_enemy_dir = 1
 			bullet_enemy.get_node("Sprite").set_flip_h(false)
 
