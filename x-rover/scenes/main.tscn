@@ -12,8 +12,59 @@ current = true
 script = ExtResource( 1 )
 
 [node name="enemy-1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 2565.29, 6459.73 )
+position = Vector2( 2565.29, 6455.73 )
 scale = Vector2( -1, 1 )
+
+[node name="enemy-2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5296.68, 6201.63 )
+scale = Vector2( -1, 1 )
+
+[node name="enemy-3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3244.21, 5602.11 )
+
+[node name="enemy-4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1795.27, 5202.44 )
+
+[node name="enemy-5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 595.952, 4601.41 )
+
+[node name="enemy-6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1685.2, 4299.83 )
+scale = Vector2( -1, 1 )
+
+[node name="enemy-7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3663.82, 3901.16 )
+scale = Vector2( -1, 1 )
+
+[node name="enemy-8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3729.48, 3399.26 )
+
+[node name="enemy-9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3244.22, 3402.42 )
+scale = Vector2( -1, 1 )
+
+[node name="enemy-10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1390.95, 2802.11 )
+
+[node name="enemy-11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3289.33, 2301.85 )
+scale = Vector2( -1, 1 )
+
+[node name="enemy-12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3997.92, 2001.27 )
+scale = Vector2( -1, 1 )
+
+[node name="enemy-13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2635.07, 1400.61 )
+
+[node name="enemy-14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1910.53, 801.781 )
+
+[node name="enemy-15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 705.549, 204.439 )
+
+[node name="enemy-16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 437.007, 501.899 )
 
 [node name="tilemap-1" parent="." instance=ExtResource( 3 )]
 position = Vector2( -3.96663, -8.73912 )
