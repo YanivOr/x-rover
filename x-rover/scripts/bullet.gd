@@ -6,8 +6,8 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.name == 'tilemap-1':
 			pass
-		if body.has_method("gotShot"):
-			body.call("gotShot")
+		if body.has_method("got_shot"):
+			body.call("got_shot")
 			
 		queue_free()
 			

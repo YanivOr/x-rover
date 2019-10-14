@@ -25,11 +25,11 @@ func _physics_process(delta):
 		get_parent().add_child(bullet_enemy)
 		shooting_time = 0
 
-func gotShot():
+func got_shot():
 	var explosion = preload("res://scenes/explosion-1.tscn").instance()
 	explosion.position = global_position
 	explosion.frame = 0
 	explosion.play("explode")
 	get_parent().add_child(explosion)
+	global.increment_score()
 	queue_free()
-	#global.incrementScore()

@@ -8,17 +8,17 @@ func _process(delta):
 	if lives == 0:
 		pass
 
-func incrementScore():
+func increment_score():
 	score += 1
 
-func decrementScore():
+func decrement_score():
 	score -= 1
 
-func incrementLives():
+func increment_lives():
 	lives += 1
 
-func decrementLives():
+func decrement_lives():
 	lives -= 1
 	
-func gotKey():
+func got_key():
 	key = true

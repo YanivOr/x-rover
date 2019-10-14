@@ -7,7 +7,7 @@ func _physics_process(delta):
 		if body.name == 'tilemap-1':
 			pass
 		elif body.name == 'player':
-			#global.decrementLives()
+			global.decrement_lives()
 			get_tree().reload_current_scene()
 			pass
 		else:

@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/misc/live.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 86.3684
+radius = 42.0092
 
 [node name="potion" type="Area2D"]
 script = ExtResource( 1 )
