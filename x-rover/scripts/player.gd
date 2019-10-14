@@ -9,10 +9,10 @@ onready var shooting_fire_animation = shooting_fire.get_node("AnimationPlayer")
 onready var exhaust_smoke_animation = exhaust_smoke.get_node("AnimationPlayer")
 
 
-const MOVE_SPEED = 400
+const MOVE_SPEED = 500
 const GRAVITY = 20
 const JUMP_FORCE = -500
-const HIGH_JUMP_FORCE = -800
+const HIGH_JUMP_FORCE = -850
 const FLOOR = Vector2(0, -1)
 const BULLET_VELOCITY = 3000
 const SHOOTING_INTERVAL = 0.15
