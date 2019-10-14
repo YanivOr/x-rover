@@ -6,10 +6,14 @@ func _physics_process(delta):
 	for body in bodies:
 		if body.name == 'tilemap-1':
 			pass
-		if body.has_method("gotShot"):
-			body.call("gotShot")
-			
+		elif body.name == 'player':
+			#global.decrementLives()
+			get_tree().reload_current_scene()
+			pass
+		else:
+			pass
+
 		queue_free()
-			
+
 func _on_Timer_timeout():
 	queue_free()

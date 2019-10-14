@@ -59,4 +59,4 @@ shape = SubResource( 3 )
 
 [node name="ground-ray" type="RayCast2D" parent="."]
 enabled = true
-cast_to = Vector2( 0, 55 )
+cast_to = Vector2( 0, 60 )
