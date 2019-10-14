@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/particles/smoke_particle.png" type="Texture" id=1]
+
+[sub_resource type="Curve" id=1]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 76.032 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 4.48416e-44 )
+colors = PoolColorArray( 0.517647, 0.517647, 0.517647, 1, 0.682353, 0.647059, 0.545098, 1 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "idle"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Particles2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "shooting"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Particles2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+
+[node name="exhaust-smoke" type="Node2D"]
+
+[node name="Particles2D" type="CPUParticles2D" parent="."]
+rotation = 1.5708
+scale = Vector2( 0.224422, 0.224422 )
+amount = 100
+preprocess = 0.1
+texture = ExtResource( 1 )
+emission_shape = 1
+emission_sphere_radius = 8.0
+gravity = Vector2( 0, -150 )
+initial_velocity = 0.0
+angular_velocity = 4.37125e+24
+angular_velocity_curve = SubResource( 1 )
+linear_accel = 50.0
+scale_amount_curve = SubResource( 2 )
+color_ramp = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/idle = SubResource( 4 )
+anims/shooting = SubResource( 5 )

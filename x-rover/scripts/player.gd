@@ -1,10 +1,13 @@
 extends KinematicBody2D
 
 onready var shooting_fire = preload("res://scenes/shooting-fire.tscn").instance()
+onready var exhaust_smoke = preload("res://scenes/exhaust-smoke.tscn").instance()
 
 onready var ground_ray = get_node("ground-ray")
 onready var animated_sprites = get_node("animated-sprites")
 onready var shooting_fire_animation = shooting_fire.get_node("AnimationPlayer")
+onready var exhaust_smoke_animation = exhaust_smoke.get_node("AnimationPlayer")
+
 
 const MOVE_SPEED = 400
 const GRAVITY = 20
@@ -31,7 +34,9 @@ func _physics_process(delta):
 	set_velocity()
 	set_player()
 	set_shooting_fire()
-	#animate_shooting_fire()
+	animate_shooting_fire()
+	set_exhaust_smoke()
+	animate_exhaust_smoke()
 	animate_bullet(delta)
 	verify_ground()
 	play()
@@ -125,6 +130,30 @@ func animate_shooting_fire():
 		shooting_fire.position.y -= 20
 	else:
 		shooting_fire.position.y -= 10
+
+func set_exhaust_smoke():
+	get_parent().add_child(exhaust_smoke)
+	
+func animate_exhaust_smoke():
+	if is_driving:
+		exhaust_smoke_animation.play("shooting")
+	else:
+		exhaust_smoke_animation.play("idle")
+		
+	exhaust_smoke.position = global_position
+	exhaust_smoke.scale.y = 0.4
+			
+	if is_right:
+		exhaust_smoke.position.x -= 55
+		exhaust_smoke.scale.x = -0.5
+	else:
+		exhaust_smoke.position.x += 55
+		exhaust_smoke.scale.x = 0.5
+
+	if is_high:
+		exhaust_smoke.position.y -= 42
+	else:
+		exhaust_smoke.position.y -= 30
 
 func animate_bullet(delta):
 	shooting_time += delta
