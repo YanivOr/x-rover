@@ -51,7 +51,7 @@ tracks/0/keys = {
 
 [node name="Particles2D" type="CPUParticles2D" parent="."]
 rotation = 1.5708
-scale = Vector2( 0.663688, 0.663688 )
+scale = Vector2( 0.224422, 0.224422 )
 amount = 32
 preprocess = 0.1
 texture = ExtResource( 1 )

@@ -18,7 +18,7 @@ var is_low = false
 var anim
 var bullet_dir
 var shooting_time = 0
-var shooting_interval = 0.15
+var shooting_interval = 0.5
 
 # warning-ignore:unused_argument
 func _physics_process(delta):
@@ -76,7 +76,8 @@ func _physics_process(delta):
 		is_low = false
 			
 	if Input.is_action_pressed("ui_space"):
-		shooting_fire_animations.play("shooting")
+		pass
+		#shooting_fire_animations.play("shooting")
 	else:
 		shooting_fire_animations.play("idle")
 		

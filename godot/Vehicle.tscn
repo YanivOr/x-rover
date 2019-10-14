@@ -2386,6 +2386,7 @@ position = Vector2( -10.5599, -24.9668 )
 texture = ExtResource( 3 )
 
 [node name="exhaust" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( -98.5409, -90.5788 )
 texture = ExtResource( 4 )
 
@@ -2397,6 +2398,7 @@ position = Vector2( 23.9431, -79.9218 )
 texture = ExtResource( 6 )
 
 [node name="gattling" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 94.5211, -48.8848 )
 texture = ExtResource( 7 )
 

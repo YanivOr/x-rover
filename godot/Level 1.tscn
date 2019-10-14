@@ -15,7 +15,6 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 511.079, 300.635 )
 current = true
-zoom = Vector2( 3, 3 )
 process_mode = 0
 offset_v = 1.0
 offset_h = 1.0

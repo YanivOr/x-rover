@@ -4,13 +4,15 @@ onready var shooting_fire = preload("res://scenes/shooting-fire.tscn").instance(
 
 onready var ground_ray = get_node("ground-ray")
 onready var animated_sprites = get_node("animated-sprites")
+onready var shooting_fire_animation = shooting_fire.get_node("AnimationPlayer")
 
 const MOVE_SPEED = 400
 const GRAVITY = 20
 const JUMP_FORCE = -500
 const HIGH_JUMP_FORCE = -800
 const FLOOR = Vector2(0, -1)
-const BULLET_VELOCITY = 6000
+const BULLET_VELOCITY = 3000
+const SHOOTING_INTERVAL = 0.15
 
 var velocity = Vector2(0, 0)
 var is_on_floor = false
@@ -21,13 +23,16 @@ var is_jump_low = false
 var is_jump_high = false
 var is_shooting = false
 var anim
+var shooting_time = 0
+var bullet_dir = 1
 
 func _physics_process(delta):
 	handle_events()
 	set_velocity()
 	set_player()
 	set_shooting_fire()
-	animate_shooting_fire()
+	#animate_shooting_fire()
+	animate_bullet(delta)
 	verify_ground()
 	play()
 		
@@ -103,12 +108,11 @@ func set_shooting_fire():
 	
 func animate_shooting_fire():
 	if is_shooting:
-		shooting_fire.get_node("AnimationPlayer").play("shooting")
+		shooting_fire_animation.play("shooting")
 	else:
-		shooting_fire.get_node("AnimationPlayer").play("idle")
+		shooting_fire_animation.play("idle")
 
 	shooting_fire.position = global_position
-	shooting_fire.position.y -= 20
 			
 	if is_right:
 		shooting_fire.position.x += 70
@@ -117,3 +121,29 @@ func animate_shooting_fire():
 		shooting_fire.position.x -= 70
 		shooting_fire.scale.x = -1
 
+	if is_high:
+		shooting_fire.position.y -= 20
+	else:
+		shooting_fire.position.y -= 10
+
+func animate_bullet(delta):
+	shooting_time += delta
+	var bullet = preload("res://scenes/bullet.tscn").instance()
+	
+	if is_shooting and shooting_time > SHOOTING_INTERVAL:
+		if is_right:
+			bullet_dir = 1
+			bullet.get_node("Sprite").set_flip_h(false)
+		else:
+			bullet_dir = -1
+			bullet.get_node("Sprite").set_flip_h(true)
+			
+		bullet.linear_velocity = Vector2(bullet_dir * BULLET_VELOCITY, 0)
+		bullet.add_collision_exception_with(self)
+		get_parent().add_child(bullet)
+
+		shooting_time = 0
+
+	bullet.position = global_position
+	bullet.position.x += 70 * bullet_dir
+	bullet.position.y += -22
