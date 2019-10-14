@@ -1,0 +1,125 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/tiles/tiles-1.png" type="Texture" id=1]
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 37.2113, 98.7837, 25.5829, 98.086, 10.9311, 97.6208, 5.81462, 95.0626, 3.02381, 87.3878, 2.55867, 82.5621, 5.34949, 75.585, 6.97746, 66.98, 10.6986, 61.3984, 15.5825, 56.747, 29.0714, 52.5608, 36.9787, 52.7934, 42.0952, 51.8631, 48.142, 50.4677, 54.8865, 49.5374, 57.6773, 49.3048, 64.8869, 50.7002, 69.5382, 52.0957, 73.0268, 52.3282, 76.7479, 49.5374, 82.3295, 48.3746, 85.3529, 48.3746, 90.0042, 50.0025, 93.2602, 50.0025, 98.7963, 49.6065, 100, 100 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 1.16749, 50.177, 5.35371, 48.549, 12.0982, 49.7118, 14.6564, 51.5724, 20.2381, 51.5724, 23.7266, 49.9444, 27.2151, 50.177, 30.9362, 49.0141, 35.355, 46.6884, 40.4715, 48.0838, 44.8903, 49.2467, 49.5416, 47.8513, 55.5884, 49.4793, 59.5421, 49.0141, 69.3099, 50.177, 71.8682, 50.177, 75.1241, 49.0141, 76.7521, 48.0838, 81.4034, 48.0838, 86.0548, 48.0838, 91.1713, 49.4793, 96.2878, 49.7118, 99.3112, 49.2467, 99.5437, 99.0162, 0.0046463, 99.2488 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 50.6421, 1.39075, 48.0838, 8.3678, 48.7815, 11.6237, 49.9444, 15.3448, 51.5724, 22.5544, 50.6421, 27.6709, 49.2467, 31.6246, 47.3861, 34.1828, 47.1536, 37.9039, 48.549, 43.4856, 49.4793, 50.9277, 49.0141, 57.9048, 49.2467, 66.0446, 50.6421, 70.4634, 50.6421, 77.4405, 51.3398, 85.3478, 54.5958, 91.162, 59.2471, 94.4179, 67.6196, 94.8831, 74.5966, 97.2087, 83.4342, 95.5808, 89.9461, 92.5574, 95.2951, 89.534, 96.9231, 82.557, 98.086, 66.5098, 97.3883, 53.2534, 96.458, 44.6484, 98.7837, 18.3682, 99.0162, 11.1586, 97.8534, 0.693054, 99.0162 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 99.9996, 99.767, 0, 99.767, 0, 3.48386, 6.73981, 2.08845, 11.6237, 2.55358, 17.4379, 4.41412, 24.8801, 3.71642, 30.2292, 3.01871, 35.3457, 1.15817, 39.997, 2.32101, 47.6718, 2.08845, 51.1603, 2.08845, 58.1373, 2.08845, 65.5795, 2.78615, 74.8822, 5.57697, 80.2313, 5.57697, 86.278, 8.60035, 92.7899, 15.1123, 95.3482, 24.1824, 98.6042, 31.8571, 99.3018, 48.1369 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0.237221, 3.48386, 5.12115, 2.78615, 8.3771, 3.48386, 13.0285, 5.11183, 20.4706, 6.97237, 24.8894, 5.57697, 32.3316, 2.78615, 36.5178, 1.62331, 39.5412, 1.39074, 41.4018, 2.32101, 45.1228, 2.55358, 54.8907, 1.85588, 58.3792, 2.78615, 64.8911, 3.48386, 70.0076, 4.87926, 72.1007, 4.64669, 73.4961, 3.94899, 76.0544, 2.55358, 80.9383, 3.48386, 86.7525, 3.94899, 93.7296, 3.94899, 98.846, 3.48386, 99.7763, 5.11183, 99.5437, 99.5344, 0.0046463, 99.3018 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 98.8418, 99.3018, 0, 99.5344, 0.698128, 52.7883, 1.6284, 44.881, 2.55867, 35.5782, 3.02381, 30.4617, 4.18665, 24.415, 10.0008, 15.3448, 17.2105, 8.36778, 24.8852, 6.97237, 30.6994, 6.0421, 37.6764, 5.80953, 43.2581, 5.3444, 47.4443, 2.78615, 52.3282, 2.32101, 59.5378, 3.01871, 65.352, 4.18156, 71.6314, 5.3444, 74.8873, 4.64669, 81.1666, 3.01871, 84.8877, 2.32101, 88.1437, 3.01871, 94.8882, 4.18156, 98.8418, 3.48386, 99.7721, 5.11183 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "tiles-1.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "tiles-1.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 100, 0, 100, 100 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "tiles-1.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 200, 0, 100, 100 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "tiles-1.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 200, 100, 100, 100 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "tiles-1.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 100, 100, 100, 100 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "tiles-1.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 100, 100, 100 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+
+[node name="tilemap-1" type="TileMap"]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 100, 100 )
+format = 1
+tile_data = PoolIntArray( 65542, 0, 0, 65543, 1, 0, 65544, 2, 0, 262145, 5, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262149, 4, 0, 262150, 4, 0, 262151, 3, 0 )
