@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/particles/fire_particle.png" type="Texture" id=1]
 
@@ -7,35 +7,14 @@ min_value = -360.0
 max_value = 360.0
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 76.032 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=2]
-curve = SubResource( 1 )
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="Gradient" id=3]
 offsets = PoolRealArray( 0, 4.48416e-44, 0.13535, 0.213376, 1 )
 colors = PoolColorArray( 0.968627, 0.52549, 0.0980392, 1, 0.956863, 0.862745, 0.580392, 1, 0.886275, 0.627451, 0.109804, 1, 0.901961, 0.572549, 0.133333, 1, 1, 0.211765, 0.211765, 1 )
 
-[sub_resource type="GradientTexture" id=4]
-gradient = SubResource( 3 )
-
-[sub_resource type="Curve" id=5]
-_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
-
-[sub_resource type="CurveTexture" id=6]
-curve = SubResource( 5 )
-
-[sub_resource type="ParticlesMaterial" id=7]
-emission_shape = 1
-emission_sphere_radius = 8.0
-flag_disable_z = true
-gravity = Vector3( 0, -150, 0 )
-angular_velocity_curve = SubResource( 2 )
-orbit_velocity = 0.0
-orbit_velocity_random = 0.0
-linear_accel = 50.0
-scale_curve = SubResource( 6 )
-color_ramp = SubResource( 4 )
-
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=4]
 resource_name = "idle"
 length = 0.1
 tracks/0/type = "value"
@@ -51,9 +30,10 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=5]
 resource_name = "shooting"
 length = 0.1
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Particles2D:scale")
 tracks/0/interp = 1
@@ -67,15 +47,24 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
 }
 
-[node name="shooting_fire" type="Node2D"]
+[node name="shooting-fire" type="Node2D"]
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="Particles2D" type="CPUParticles2D" parent="."]
 rotation = 1.5708
+scale = Vector2( 0.663688, 0.663688 )
 amount = 32
 preprocess = 0.1
-process_material = SubResource( 7 )
 texture = ExtResource( 1 )
+emission_shape = 1
+emission_sphere_radius = 8.0
+gravity = Vector2( 0, -150 )
+initial_velocity = 0.0
+angular_velocity = 4.37125e+24
+angular_velocity_curve = SubResource( 1 )
+linear_accel = 50.0
+scale_amount_curve = SubResource( 2 )
+color_ramp = SubResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/idle = SubResource( 8 )
-anims/shooting = SubResource( 9 )
+anims/idle = SubResource( 4 )
+anims/shooting = SubResource( 5 )

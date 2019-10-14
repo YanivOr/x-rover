@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+onready var shooting_fire = preload("res://scenes/shooting-fire.tscn").instance()
+
 onready var ground_ray = get_node("ground-ray")
 onready var animated_sprites = get_node("animated-sprites")
 
@@ -17,16 +19,17 @@ var is_high = true
 var is_driving = false
 var is_jump_low = false
 var is_jump_high = false
+var is_shooting = false
 var anim
 
 func _physics_process(delta):
 	handle_events()
 	set_velocity()
-	set_anim()
+	set_player()
+	set_shooting_fire()
+	animate_shooting_fire()
 	verify_ground()
 	play()
-		
-	print(is_on_floor)
 		
 func handle_events():
 	if Input.is_action_pressed("ui_right"):
@@ -47,8 +50,12 @@ func handle_events():
 	if Input.is_action_just_released("ui_down") and is_on_floor:
 		is_high = true
 		is_jump_high = true
+	if Input.is_action_pressed("ui_space"):
+		is_shooting = true
+	if Input.is_action_just_released("ui_space"):
+		is_shooting = false
 		
-func set_anim():
+func set_player():
 	if is_driving and is_high:
 		anim = "drive-high"
 	elif is_driving and !is_high:
@@ -90,3 +97,23 @@ func verify_ground():
 
 func play():
 	animated_sprites.play(anim)
+
+func set_shooting_fire():
+	get_parent().add_child(shooting_fire)
+	
+func animate_shooting_fire():
+	if is_shooting:
+		shooting_fire.get_node("AnimationPlayer").play("shooting")
+	else:
+		shooting_fire.get_node("AnimationPlayer").play("idle")
+
+	shooting_fire.position = global_position
+	shooting_fire.position.y -= 20
+			
+	if is_right:
+		shooting_fire.position.x += 70
+		shooting_fire.scale.x = 1
+	else:
+		shooting_fire.position.x -= 70
+		shooting_fire.scale.x = -1
+
