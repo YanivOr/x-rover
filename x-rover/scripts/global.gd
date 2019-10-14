@@ -4,6 +4,9 @@ var score = 0
 var lives = 3
 var key = false
 
+func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+
 func _process(delta):
 	if lives == 0:
 		pass

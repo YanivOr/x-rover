@@ -16,6 +16,8 @@
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+drag_margin_left = 0.0
+drag_margin_right = 0.0
 script = ExtResource( 2 )
 
 [node name="tilemap-1" parent="." instance=ExtResource( 3 )]
@@ -84,9 +86,6 @@ position = Vector2( 1910.53, 801.781 )
 [node name="enemy-15" parent="enemies" instance=ExtResource( 4 )]
 position = Vector2( 705.549, 204.439 )
 
-[node name="enemy-16" parent="enemies" instance=ExtResource( 4 )]
-position = Vector2( 437.007, 501.899 )
-
 [node name="coins" type="Node2D" parent="."]
 editor/display_folded = true
 
@@ -142,4 +141,4 @@ position = Vector2( 4097.74, 7480.51 )
 position = Vector2( 229.505, 404.617 )
 
 [node name="player" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1623.58, 6288.64 )
+position = Vector2( 1849.03, 6291.79 )
